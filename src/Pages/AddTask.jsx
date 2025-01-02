@@ -40,7 +40,7 @@ const AddTask = () => {
                         <option value="Completed">Completed</option>
                     </select>
                     </div>
-                    <button onClick={handleAddTask} className="bg-green-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-green-600 w-full">Add Task</button>
+                    <button onClick={handleAddTask} className="bg-neutral-700 text-white px-4 py-2 rounded-md shadow-md hover:bg-neutral-600 w-full">Add Task</button>
                 </form>
             </div>
         </div>

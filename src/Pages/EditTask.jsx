@@ -39,7 +39,7 @@ const EditTask = () => {
                     <option value="Pending">Pending</option>
                     <option value="Completed">Completed</option>
                 </select>
-                <button onClick={handleUpdateTask} className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600 w-full">Save</button>
+                <button onClick={handleUpdateTask} className="bg-neutral-700 text-white px-4 py-2 rounded-md shadow-md hover:bg-neutral-600 w-full">Save</button>
             </div>
         </div>
     )

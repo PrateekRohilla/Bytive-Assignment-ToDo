@@ -7,12 +7,12 @@ const Home = () => {
     const { tasks } = useTaskContext();
 
     return (
-        <div className="container mx-auto p-4">
+        <div className="max-w-3xl container mx-auto p-4">
             <h1 className="text-3xl font-bold text-center mb-6">ToDo List</h1>
 
             {/* add task btn */}
             <div className="text-center mb-4">
-                <Link to='/add-task' className="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600">
+                <Link to='/add-task' className="bg-neutral-700 text-white px-4 py-2 rounded-md shadow-md hover:bg-neutral-600">
                     Add Task
                 </Link>
             </div>
@@ -22,7 +22,7 @@ const Home = () => {
 
                 {
                     tasks.map((task) => (
-                        <li key={task.id} className="list-none bg-white p-4 rounded-md shadow-md border border-gray-200">
+                        <li key={task.id} className="list-none bg-neutral-100 p-4 rounded-md shadow-md border border-gray-200">
                             <h3 className="text-xl font-semibold mb-2">{task.title}</h3>
                             <p className="text-gray-600 mb-4">{task.description}</p>
                             {/* green - Completed | yellow - pending */}
