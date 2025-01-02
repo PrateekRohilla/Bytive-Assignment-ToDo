@@ -26,6 +26,8 @@ const EditTask = () => {
     if(!task)
         return <div>Loading...</div>
     
+    //title & desc as read only
+    //only status can be edited
     return (
         <div>
             <h1>Edit Task</h1>

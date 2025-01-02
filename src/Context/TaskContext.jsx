@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 
 const TaskContext = createContext();
 
@@ -14,6 +14,25 @@ export const TaskProvider = ({children}) => {
 
     const updateTask = (updatedTask) => 
         setTasks((prev) => prev.map((t) => (t.id === updatedTask.id ? updatedTask: t)));
+
+    //fetch initial tasks from API
+    useEffect(() => {
+      const fetchTasks = async () => {
+        const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+        const data = await response.json();
+
+        const initialTasks = data.slice(0,4).map((todo) => ({
+            id: todo.id,
+            title: todo.title,
+            description: "Sorry Desc not available 🫠",
+            status: todo.completed ? "Completed" : "Pending",
+        }));
+
+        setTasks(initialTasks);
+      }; 
+
+      fetchTasks();
+    },[]);
 
     return (
         <TaskContext.Provider value={{tasks, addTask, updateTask}}>
