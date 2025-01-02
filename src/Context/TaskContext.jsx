@@ -24,7 +24,7 @@ export const TaskProvider = ({children}) => {
         const initialTasks = data.slice(0,4).map((todo) => ({
             id: todo.id,
             title: todo.title,
-            description: "Sorry Desc not available 🫠",
+            description: "Happy New Year 🫠",
             status: todo.completed ? "Completed" : "Pending",
         }));
 
